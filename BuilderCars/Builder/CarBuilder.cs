@@ -8,49 +8,49 @@
         {
             return _car;
         }
-        public CarBuilder SetModel(string model)
+        public ICarBuilder SetModel(string model)
         {
             _car.Model = model;
             return this;
         }
 
-        public CarBuilder SetDateProduction(DateTime date)
+        public ICarBuilder SetDateProduction(DateTime date)
         {
             _car.DateProduction = date;
             return this;
         }
 
-        public CarBuilder SetWheel(string wheel)
+        public ICarBuilder SetWheel(string wheel)
         {
             _car.Wheel = wheel;
             return this;
         }
 
-        public CarBuilder SetHasSportWheel(bool hasSportWheel)
+        public ICarBuilder SetHasSportWheel(bool hasSportWheel)
         {
             _car.HasSportWheel = hasSportWheel;
             return this;
         }
 
-        public CarBuilder SetHasSportMirrors(bool hasSportMirrors)
+        public ICarBuilder SetHasSportMirrors(bool hasSportMirrors)
         {
             _car.HasSportMirrors = hasSportMirrors;
             return this;
         }
 
-        public CarBuilder SetHasSeatsComfort(bool hasSeetComfort)
+        public ICarBuilder SetHasSeatsComfort(bool hasSeetComfort)
         {
             _car.HasSeatsComfort = hasSeetComfort;
             return this;
         }
 
-        public CarBuilder SetHasGPS(bool hasGPS)
+        public ICarBuilder SetHasGPS(bool hasGPS)
         {
             _car.HasGPS = hasGPS;
             return this;
         }
 
-        public CarBuilder SetHasTablet(bool hasTablet)
+        public ICarBuilder SetHasTablet(bool hasTablet)
         {
             _car.HasTablet = hasTablet;
             return this;

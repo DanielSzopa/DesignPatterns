@@ -2,13 +2,14 @@
 {
     public interface ICarBuilder
     {
-        CarBuilder SetDateProduction(DateTime date);
-        CarBuilder SetHasGPS(bool hasGPS);
-        CarBuilder SetHasSeatsComfort(bool hasSeetComfort);
-        CarBuilder SetHasSportMirrors(bool hasSportMirrors);
-        CarBuilder SetHasSportWheel(bool hasSportWheel);
-        CarBuilder SetHasTablet(bool hasTablet);
-        CarBuilder SetModel(string model);
-        CarBuilder SetWheel(string wheel);
+        Car Build();
+        ICarBuilder SetDateProduction(DateTime date);
+        ICarBuilder SetHasGPS(bool hasGPS);
+        ICarBuilder SetHasSeatsComfort(bool hasSeetComfort);
+        ICarBuilder SetHasSportMirrors(bool hasSportMirrors);
+        ICarBuilder SetHasSportWheel(bool hasSportWheel);
+        ICarBuilder SetHasTablet(bool hasTablet);
+        ICarBuilder SetModel(string model);
+        ICarBuilder SetWheel(string wheel);
     }
 }
