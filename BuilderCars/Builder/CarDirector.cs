@@ -27,7 +27,7 @@
             var comfortCar = _carBuilder.SetModel(model)
                  .SetDateProduction(dateProduction)
                  .SetWheel(wheelName)
-                 .SetHasSeetComfort(true)
+                 .SetHasSeatsComfort(true)
                  .SetHasTablet(true)
                  .Build();
 

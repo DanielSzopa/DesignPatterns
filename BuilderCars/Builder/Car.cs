@@ -8,7 +8,7 @@
         public bool HasSportWheel { get; set; }
         public bool HasSportMirrors { get; set; }
         public bool HasGPS { get; set; }
-        public bool HasSeetComfort { get; set; }
+        public bool HasSeatsComfort { get; set; }
         public bool HasTablet { get; set; }
 
     }

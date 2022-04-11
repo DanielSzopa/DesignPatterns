@@ -38,9 +38,9 @@
             return this;
         }
 
-        public CarBuilder SetHasSeetComfort(bool hasSeetComfort)
+        public CarBuilder SetHasSeatsComfort(bool hasSeetComfort)
         {
-            _car.HasSeetComfort = hasSeetComfort;
+            _car.HasSeatsComfort = hasSeetComfort;
             return this;
         }
 
