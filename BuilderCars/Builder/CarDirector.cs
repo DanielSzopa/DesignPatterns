@@ -18,11 +18,8 @@ namespace BuilderCars.Builder
                 .SetModel(model)
                 .SetDateProduction(dateProduction)
                 .SetWheel(wheelName)
-                .SetHasSportWheel(true)
-                .SetHasSportMirrors(true)
-                .SetHasSeatsComfort(false)
-                .SetHasGPS(true)
-                .SetHasTablet(false)
+                .SetSportConfiguration(true,true)
+                .SetComfortConfiguration(false,false,false)
                 .Build();
 
             return sportCar;
@@ -35,11 +32,8 @@ namespace BuilderCars.Builder
                 .SetModel(model)
                 .SetDateProduction(dateProduction)
                 .SetWheel(wheelName)
-                .SetHasSportWheel(false)
-                .SetHasSportMirrors(false)
-                .SetHasSeatsComfort(true)
-                .SetHasGPS(true)
-                .SetHasTablet(true)
+                .SetSportConfiguration(false, false)
+                .SetComfortConfiguration(true, true, true)
                 .Build();
 
             return comfortCar;

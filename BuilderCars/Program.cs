@@ -13,12 +13,10 @@ var customCar = customCarBuilder
     .SetModel("Audi A7")
     .SetDateProduction(new DateTime(2000,12,12))
     .SetWheel("Wheel Stir")
-    .SetHasSportWheel(false)
-    .SetHasSportMirrors(true)
-    .SetHasSeatsComfort(false)
-    .SetHasGPS(true)
-    .SetHasTablet(true)
+    .SetSportConfiguration(true, false)
+    .SetComfortConfiguration(false,false,true)
     .Build();
+
 
 
 var sportCar = sportCarDirector

@@ -2,6 +2,6 @@
 {
     public interface ICarBuilderWheelStage
     {
-        ICarBuilderHasSportWheelStage SetWheel(string wheel);
+        ICarBuilderSportConfigurationStage SetWheel(string wheel);
     }
 }

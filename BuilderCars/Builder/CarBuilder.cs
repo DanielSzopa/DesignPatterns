@@ -3,8 +3,7 @@
 namespace BuilderCars.Builder
 {
     public class CarBuilder : ICarBuilder, ICarBuilderDateProductionStage, ICarBuilderWheelStage,
-        ICarBuilderModelStage, ICarBuilderHasSportWheelStage, ICarBuilderHasSportMirrorsStage, ICarBuilderHasSeatsComfort
-        ,ICarBuilderHasGPS, ICarBuilderHasTablet, ICarBuilderBuildCar
+        ICarBuilderModelStage, ICarBuilderBuildCar, ICarBuilderSportConfigurationStage, ICarBuilderComfortConfigurationStage
     {
         public Car _car;
 
@@ -30,40 +29,26 @@ namespace BuilderCars.Builder
             return this;
         }
 
-        public ICarBuilderHasSportWheelStage SetWheel(string wheel)
+        public ICarBuilderSportConfigurationStage SetWheel(string wheel)
         {
             _car.Wheel = wheel;
             return this;
         }
 
-        public ICarBuilderHasSportMirrorsStage SetHasSportWheel(bool hasSportWheel)
+
+        public ICarBuilderComfortConfigurationStage SetSportConfiguration(bool hasSportWheel, bool hasSportMirrors)
         {
             _car.HasSportWheel = hasSportWheel;
-            return this;
-        }
-
-        public ICarBuilderHasSeatsComfort SetHasSportMirrors(bool hasSportMirrors)
-        {
             _car.HasSportMirrors = hasSportMirrors;
             return this;
         }
 
-        public ICarBuilderHasGPS SetHasSeatsComfort(bool hasSeetComfort)
+        public ICarBuilderBuildCar SetComfortConfiguration(bool hasSeetComfort, bool hasGPS, bool hasTablet)
         {
             _car.HasSeatsComfort = hasSeetComfort;
-            return this;
-        }
-
-        public ICarBuilderHasTablet SetHasGPS(bool hasGPS)
-        {
             _car.HasGPS = hasGPS;
-            return this;
-        }
-
-        public ICarBuilderBuildCar SetHasTablet(bool hasTablet)
-        {
             _car.HasTablet = hasTablet;
             return this;
-        }       
+        }
     }
 }
