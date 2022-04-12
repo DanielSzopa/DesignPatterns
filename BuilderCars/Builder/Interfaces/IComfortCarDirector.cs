@@ -1,5 +1,5 @@
 ﻿
-namespace BuilderCars.Builder
+namespace BuilderCars.Builder.Interfaces
 {
     public interface IComfortCarDirector
     {

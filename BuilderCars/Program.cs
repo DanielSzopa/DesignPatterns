@@ -1,4 +1,5 @@
 ﻿using BuilderCars.Builder;
+using BuilderCars.Builder.Interfaces;
 
 ICarBuilder customCarBuilder = new CarBuilder();
 ICarBuilder sportCarBuilder = new CarBuilder();
@@ -8,13 +9,17 @@ ISportCarDirector sportCarDirector = new CarDirector(sportCarBuilder);
 IComfortCarDirector comfortCarDirector = new CarDirector(comfortCarBuilder);
 
 var customCar = customCarBuilder
+    .CreateBuilder()
     .SetModel("Audi A7")
-                 .SetDateProduction(new DateTime(2016,01,01))
-                 .SetWheel("SportWheelCutty")
-                 .SetHasSportWheel(true)
-                 .SetHasGPS(true)
-                 .SetHasTablet(true)
-                 .Build();
+    .SetDateProduction(new DateTime(2000,12,12))
+    .SetWheel("Wheel Stir")
+    .SetHasSportWheel(false)
+    .SetHasSportMirrors(true)
+    .SetHasSeatsComfort(false)
+    .SetHasGPS(true)
+    .SetHasTablet(true)
+    .Build();
+
 
 var sportCar = sportCarDirector
     .BuildSportCar("Bmw Sport", new DateTime(2022, 01, 01), "BmwWheel");

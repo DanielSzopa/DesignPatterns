@@ -1,4 +1,6 @@
-﻿namespace BuilderCars.Builder
+﻿using BuilderCars.Builder.Interfaces;
+
+namespace BuilderCars.Builder
 {
     public class CarDirector : IComfortCarDirector, ISportCarDirector
     {
@@ -11,25 +13,34 @@
 
         public Car BuildSportCar(string model, DateTime dateProduction, string wheelName)
         {
-            var sportCar = _carBuilder.SetModel(model)
-                 .SetDateProduction(dateProduction)
-                 .SetWheel(wheelName)
-                 .SetHasSportWheel(true)
-                 .SetHasSportMirrors(true)
-                 .SetHasGPS(true)
-                 .Build();
+            var sportCar = _carBuilder
+                .CreateBuilder()
+                .SetModel(model)
+                .SetDateProduction(dateProduction)
+                .SetWheel(wheelName)
+                .SetHasSportWheel(true)
+                .SetHasSportMirrors(true)
+                .SetHasSeatsComfort(false)
+                .SetHasGPS(true)
+                .SetHasTablet(false)
+                .Build();
 
             return sportCar;
         }
 
         public Car BuildComfortCar(string model, DateTime dateProduction, string wheelName)
         {
-            var comfortCar = _carBuilder.SetModel(model)
-                 .SetDateProduction(dateProduction)
-                 .SetWheel(wheelName)
-                 .SetHasSeatsComfort(true)
-                 .SetHasTablet(true)
-                 .Build();
+            var comfortCar = _carBuilder
+                .CreateBuilder()
+                .SetModel(model)
+                .SetDateProduction(dateProduction)
+                .SetWheel(wheelName)
+                .SetHasSportWheel(false)
+                .SetHasSportMirrors(false)
+                .SetHasSeatsComfort(true)
+                .SetHasGPS(true)
+                .SetHasTablet(true)
+                .Build();
 
             return comfortCar;
         }
