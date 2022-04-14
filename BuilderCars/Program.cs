@@ -20,7 +20,7 @@ var customCar = customCarBuilder
 
 
 var sportCar = sportCarDirector
-    .BuildSportCar("Bmw Sport", new DateTime(2022, 01, 01), "BmwWheel");
+    .BuildSportCar("BMW Sport", new DateTime(2022, 01, 01), "BmwWheel");
 
 var comfortCar = comfortCarDirector
     .BuildComfortCar("Maybach", new DateTime(2006, 01, 01), "ComfortWheel");
